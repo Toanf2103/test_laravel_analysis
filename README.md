@@ -11,11 +11,14 @@
 ### Step 1: Clone project
 Clone project and move project to htdocs
 
-### Step 2: Install.
+### Step 2: Clone env
+Coppy ```.env.example``` and rename to ```env```
+
+### Step 3: Install.
 ```bash
 composer install
 ```
-### Step 3: Migration:
+### Step 4: Migration:
 ```bash
 composer migrate --seed
 ```
