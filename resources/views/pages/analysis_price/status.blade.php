@@ -1,0 +1,1 @@
+<span class="badge {{$row->status_class_color}}">{{$row->status_name}}</span>
