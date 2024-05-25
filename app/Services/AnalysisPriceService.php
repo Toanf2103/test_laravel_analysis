@@ -14,7 +14,6 @@ class AnalysisPriceService
         $data = AnalysisPrice::join('users', 'analysis_prices.customer_id', '=', 'users.id')
             ->leftJoin('analysis_price_statuses', 'analysis_prices.status_id', '=', 'analysis_price_statuses.id')
             ->leftJoin('group_customers', 'users.group_customer_id', '=', 'group_customers.id')
-            ->with(['customer', 'customer.group', 'status'])
             ->select([
                 'analysis_prices.id as id',
                 'analysis_prices.name as name',

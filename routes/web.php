@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AnalysisPriceController as ControllersAnalysisPriceController;
 use App\Http\Controllers\DataTable\AnalysisPriceController;
+use App\Http\Controllers\VnpayController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,3 +31,7 @@ Route::group(['prefix' => 'datatable', 'as' => 'datatable.'], function () {
     Route::post('/{analysisPrice}', [AnalysisPriceController::class, 'update'])->name('update');
     Route::get('/{analysisPrice}', [AnalysisPriceController::class, 'show'])->name('show');
 });;
+
+Route::get('/checkout', [VnpayController::class, 'checkout'])->name('checkout');
+Route::get('/done', [VnpayController::class, 'done'])->name('done');
+
